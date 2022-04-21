@@ -170,25 +170,24 @@ function calculateTotal(luckyNumber, preDiscountPrice) {
 //########### FUNCTIONS ###########
 function isEvenOrOdd(number) {
     if (number % 2 === 0) {
-        return alert(`${number} is even.`)
+        return `${number} is even.`;
     } else {
-        return alert(`${number} is odd.`)
+        return `${number} is odd.`;
     }
 }
 
 function numberPlus100(number) {
-    number = parseFloat(number + 100);
-
-    return alert(`If you add 100 to your number, it would be ${number}.`)
+    number = number + 100;
+    return `If you add 100 to your number, it would be ${number}.`;
 }
 
 function isPositiveOrNegative(number) {
     if (number >= 0) {
-        return alert(`${number} is a positive number!`)
+        return `${number} is a positive number!`;
     } else if (number < 0) {
-        return alert(`${number} is a negative number!`)
+        return `${number} is a negative number!`;
     } else {
-        return alert(`sorry, that is not a number..`)
+        return `sorry, that is not a number..`;
     }
 }
 
@@ -196,7 +195,7 @@ function userNumberPrompt(number) {
     let initialPrompt = confirm("Would you like to enter a number?")
 
     if(initialPrompt) {
-        prompt("Enter number")
+        let numberEntry = prompt("Enter number")
         isEvenOrOdd(number)
         numberPlus100(number)
         isPositiveOrNegative(number)
@@ -204,5 +203,10 @@ function userNumberPrompt(number) {
 }
 
 userNumberPrompt()
+// console.log(isEvenOrOdd(5));
+// console.log(numberPlus100(5));
+// console.log(isPositiveOrNegative(5));
 
 //###########  ###########
+
+
