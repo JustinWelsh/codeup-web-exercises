@@ -8,6 +8,7 @@
 // }
 
 /** DO WHILE LOOP **/
+
 let allCones = Math.floor(Math.random() * 50) + 50;
 let conesSold = allCones;
 
