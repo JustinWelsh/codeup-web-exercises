@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-    let names = ["Mike", "Marty", "Jason", "Justin"]
+    let names = ["Mike", "Marty", "Jason", "Justin", "Krystal", "Shana"]
 
     /**
      * TODO:
@@ -15,7 +15,7 @@
      * array.
      */
 
-    console.log(names.length);
+    // console.log(names.length);
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
@@ -36,6 +36,7 @@
     // for(let i = 0; i < names.length; i++) {
     //     console.log(names[i]);
     // }
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
@@ -47,6 +48,12 @@
     // names.forEach(function(i) {
     //     console.log(` ${i} : but with a "for each" loop!`);
     // });
+
+    // For of loop:
+
+    // for (let name of names) {
+    //     console.log(name);
+    // }
 
     /**
      * TODO:
@@ -66,20 +73,24 @@
     function returnFirstArrayIndex() {
         return names[0];
     }
-    console.log(returnFirstArrayIndex());
+
 
     //2.
     function returnSecondArrayIndex() {
         return names[1];
     }
-    console.log(returnSecondArrayIndex());
+
 
     //3.
     function returnLastArrayIndex() {
         let lastItem = names[names.length - 1];
         return lastItem;
     }
-    console.log(returnLastArrayIndex());
+
+
+    // console.log(returnFirstArrayIndex());
+    // console.log(returnSecondArrayIndex());
+    // console.log(returnLastArrayIndex());
 
 
 
