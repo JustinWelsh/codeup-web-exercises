@@ -36,5 +36,9 @@
     let liTagPlanetString = planetsArray.join('<li>')
     console.log(liTagPlanetString);
 
+//    ------------------ Instructor solution ----------------
+
+    // let planetsUl = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>";
+
 
 })();
