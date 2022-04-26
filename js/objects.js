@@ -35,6 +35,11 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+    // person.sayHello = function() {
+    //     let message = `Hello from ${person.firstName} ${person.lastName}!`;
+    //     return message;
+    // }
+
     // console.log(person.sayHello());
 
 
@@ -183,6 +188,10 @@
     console.log(createBook("My first book", "JW"));
     console.log(createBook("Book #2", "JW"));
     console.log(createBook("Book #3", "JW"));
+
+
+//------- Instructor Solution ------------
+
 
 
 })();
