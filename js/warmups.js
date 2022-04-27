@@ -22,22 +22,52 @@
 
 //----------Instructor Solution---------------------------
 
-function fizzBuzz(limit) {
-    if (limit === undefined) {
-        limit = 100;
-    }
+// function fizzBuzz(limit) {
+//     if (limit === undefined) {
+//         limit = 100;
+//     }
+//
+//     for( let i = 1; i <= limit; i++) {
+//         if(i % 3 === 0 && i % 5 === 0) {
+//             console.log("FizzBuzz");
+//         } else if (i % 3 === 0) {
+//             console.log("Fizz");
+//         } else if (i % 5 === 0) {
+//             console.log("Buzz");
+//         } else {
+//             console.log(i);
+//         }
+//     }
+// }
+//
+// fizzBuzz()
 
-    for( let i = 1; i <= limit; i++) {
-        if(i % 3 === 0 && i % 5 === 0) {
-            console.log("FizzBuzz");
-        } else if (i % 3 === 0) {
-            console.log("Fizz");
-        } else if (i % 5 === 0) {
-            console.log("Buzz");
-        } else {
-            console.log(i);
-        }
+//------------------------------
+/**
+ * Warm-up
+ * Write a function that takes in an array of strings and returns a string of the first letter of each element concatenated together:
+ *
+ * Ex. allFirstLetters([“dog”,”cat”,”frog”,”bat”]) -> “dcfb”;**/
+
+
+//----------My Attempt---------------------------
+// let array = ["Car", "Dog", "Cat", "Bob"]
+
+// function takesFirstLetter(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i] = arr[0]);
+//     }
+// }
+// takesFirstLetter(array)
+
+//----------Instructor Solution---------------------------
+function allFirstLetters(arr) {
+    let bucket = "";
+    for (let el of arr) {
+        bucket += el[0];
     }
+    return bucket;
 }
 
-fizzBuzz()
+const testArrayString = ['dog', 'cat', 'frog', 'bat'];
+console.log(allFirstLetters(testArrayString));
