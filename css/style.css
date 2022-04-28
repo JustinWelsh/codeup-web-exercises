@@ -1,9 +1,88 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 21px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 .fancy-header {
-    color: purple; /* single line comment */
-    text-decoration: underline;
+
+    /*text-decoration: underline;*/
+}
+
+.core-values {
+    padding-bottom: 40px;
+}
+
+.company-vision {
+}
+
+.limegreen-accent {
+    color: limegreen;
+}
+
+.small-txt {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+header span {
+    font-size: 120px;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 50px 0 100px 0;
+    box-shadow: 1px 1px 20px #252525;
+}
+ul, ol {
+    display: table;
+    margin: 0 auto;
+}
+ol {
+    list-style: none;
+}
+ul {
+    list-style: url("../img/icon-star.png");
+}
+
+.our-product div {
+    margin: 0 auto;
+    max-width: 310px;
+    background-color: lightgray;
+    padding: 20px 20%;
+    border-radius: 10px;
+}
+footer {
+    padding: 50px 0 80px 0;
+}
+
+a {
+    color: limegreen;
+}
+a:hover,
+a:focus {
+    color: rgb(180, 18, 180);
+}
+
+/* typography */
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 42px;
+    color: limegreen;
+    /*text-decoration: underline;*/
+
 }
 
 img{
     max-width: 35%;
     max-height: 35%;
+    border-radius:10%;
+    box-shadow: 0 10px 30px black;
+    margin: 30px;
 }
+
