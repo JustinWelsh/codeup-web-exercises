@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise HTML Forms</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Register With Us</h1>
+        </header>
+
+        <form action="https://request-inspector.glitch.me/" method="post">
+<!--            Email | Password | Bio          -->
+            <input type="email" name="email" placeholder="Email"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <textarea name="bio" id="bio-textarea" cols="30" rows="10" placeholder="Enter bio here.."></textarea>
+
+            <!--        <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Tell me everything!">Starting data for the textarea.</textarea>    -->
+
+            <h3>How did you hear about us?</h3>
+            <input type="radio" name="hear-about-us-question" value="billboard" id="billboard">
+            <label for="billboard">Billboard</label>
+            <br>
+
+            <input type="radio" name="hear-about-us-question" value="radio advertisement" id="radio advertisement">
+            <label for="radio advertisement">Radio Advertisement</label>
+            <br>
+
+            <input type="radio" name="hear-about-us-question" value="internet advertisement" id="internet advertisement">
+            <label for="internet advertisement">Internet Advertisement</label>
+            <br>
+
+            <input type="radio" name="hear-about-us-question" value="other" id="other">
+            <label for="other">Other</label>
+            <br>
+
+            <!--        -->
+            <label for="web-browser">Which web browser are you using?</label>
+            <select name="user-web-browser-question" id="web-browser">
+                <option value="chrome">Chrome</option>
+                <option value="firefox">Firefox</option>
+                <option value="explorer">Explorer</option>
+            </select>
+
+            <input type="submit" value="Send">
+        </form>
+
+    </main>
+
+</body>
+</html>
+
+<!--       API for bonus? -  "getform.io" -->
