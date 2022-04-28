@@ -61,13 +61,36 @@
 // takesFirstLetter(array)
 
 //----------Instructor Solution---------------------------
-function allFirstLetters(arr) {
-    let bucket = "";
-    for (let el of arr) {
-        bucket += el[0];
+// function allFirstLetters(arr) {
+//     let bucket = "";
+//     for (let el of arr) {
+//         bucket += el[0];
+//     }
+//     return bucket;
+// }
+//
+// const testArrayString = ['dog', 'cat', 'frog', 'bat'];
+// console.log(allFirstLetters(testArrayString));
+
+
+function alphaString(str) {
+    if (typeof str === 'string') {
+        for (let i = 0; i < str.length; i++) {
+            return str[i].sort();
+        }
     }
-    return bucket;
 }
 
-const testArrayString = ['dog', 'cat', 'frog', 'bat'];
-console.log(allFirstLetters(testArrayString));
+// ----------Instructor Solution---------------------------
+
+function alphabetizer(str) {
+    // let strArray = str.split('')
+    // console.log(strArray)
+    // let sortedArray = strArray.sort()
+    // console.log(sortedArray);
+    // return sortedArray.join('')
+
+    //          refactored below..
+
+    return str.split('').sort().join('');
+}
