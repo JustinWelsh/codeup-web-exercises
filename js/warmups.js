@@ -94,3 +94,17 @@ function alphabetizer(str) {
 
     return str.split('').sort().join('');
 }
+
+// Write a function that takes in an array of numbers and returns the sum of all elements.
+//
+// Ex. sumOfElements([1,2,3,4,5]) -> returns 15.
+
+// let numArray = [1,2,3,4,5];
+// function sumOfElements(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//
+//     }
+// }
+// sumOfElements(numArray)
+// ----------Instructor Solution---------------------------
+

@@ -1,0 +1,29 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+.message{
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: .5em;
+    border-radius: 5px;
+}
+.message-info {
+    background-color: rgb(205,222,255);
+    color: rgb(45,34,140);
+}
+.message-success{
+    background-color: rgb(207,243,218);
+    color: rgb(42,118,66);
+}
+.message-warning{
+    background-color: rgb(253,251,201);
+    color: rgb(145,125,34);
+}
+.message-error{
+    background-color: rgb(250,210,214);
+    color: rgb(156,63,84);
+}
