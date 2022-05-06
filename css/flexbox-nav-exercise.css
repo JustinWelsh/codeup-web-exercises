@@ -8,19 +8,18 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
 }
-/*nav {*/
-/*    background: rgb(193,193,193);*/
-/*}*/
+
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 nav a {
     text-decoration: none;
     color: black;
     display: inline-block;
-    padding: 10px 10px;
+    padding: 10px;
     font-size: 12px;
 }
 nav a:hover {
@@ -41,6 +40,6 @@ nav .flex-item{
 nav a.logo-text-lg{
     font-size: 3em;
     font-weight: normal;
-    padding: .2em;
+    padding: .2em 0;
     margin: auto;
 }

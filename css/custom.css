@@ -1,0 +1,16 @@
+*{box-sizing: border-box;}
+.form-control {
+    width: auto;
+}
+.jumbotron {
+    background-image: url("../img/pizza.png");
+    height: 346px;
+    background-size: cover;
+
+}
+
+div.jumbotron div {
+    width: 100%;
+    text-align: center;
+}
+
