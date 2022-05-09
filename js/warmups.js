@@ -183,6 +183,19 @@ function returnProductEssentialDetails(object) {
 //
 // Create a function, returnAllProductsEssentialDetails, that takes in an array of product objects and returns an array of product objects containing only the essential details of the product name and price in cents.
 
+// Warm-Up:
+// Write a function that will accept an array of objects and return the tallest object from the array.
+//
+//     A test array will be provided in Slack. :)
+
+
+function tallest(arr) {
+    let largest = {heightInMM: 0}
+    for (let i = 0; i < arr.length; i++) {
+
+    }
+}
+
 
 
 
