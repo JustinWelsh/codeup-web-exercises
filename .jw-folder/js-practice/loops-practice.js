@@ -1,6 +1,5 @@
-console.log("JS file is Connected..");
-
-/**
+console.log("loops-practice.js file is connected!");
+/**     LOOPS
  * 1.   Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
  * EXAMPLE:
  *          7 x 1 = 7
@@ -59,10 +58,13 @@ function tenRanNumEvenOdd() {
 
 function numPyramid() {
     for (let i = 1; i < 10; i++) {
+
         let str = "";
         for (let j = 0; j < i; j++) {
             str += i;
         }
+        // let str = "";
+
         console.log(str);
     }
 }
@@ -93,13 +95,24 @@ numPyramid()
 // 10
 // 5
 
+for (let i = 100; i >= 5; i-=5) {
+    // console.log(i)
+}
 
-//Break and Continue
-// Create a file named break_and_continue.js in the js directory.
-// Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
-// Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
-// Your output should look like this:
+//      BREAK AND CONTINUE
 //
+// 1.   Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
+//
+// for (let i = 1; i < 51; i++) {
+//     let numPrompt = prompt("Enter an odd number between 1 and 50");
+//     if (numPrompt % 2 !== 0) {
+//         break;
+//     }
+// }
+
+// 2.   Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+//
+// Your output should look like this:
 //
 // Number to skip is: 27
 //
@@ -128,9 +141,9 @@ numPyramid()
 // Here is an odd number: 45
 // Here is an odd number: 47
 // Here is an odd number: 49
-// While Loops
-// Create a file named while.js in the js directory.
-//
+
+
+//      WHILE LOOPS
 // Create a while loop that uses console.log() to create the output shown below.
 //
 //
@@ -150,12 +163,18 @@ numPyramid()
 // 16384
 // 32768
 // 65536
+//
+//==============================================================================
+
 
 //Write a function, filterNumbers() that takes in an array of mixed data types and returns an array of only the numbers type in ascencding order.
 //
 // Example input: ["fred", true, 5, 3] Example output: [3, 5]
 
-
+//==============================================================================
+//OBJECTS
+// Exercise 1. Write a function called makeCar that takes in two strings, make and model, and returns an object with those properties
+// Example: makeCar("VW", "beetle") returns the object {"make": "VW", "model", "beetle"}
 
 // function makeCar(make, model) {
 //     return {carMake: make, model}
@@ -168,5 +187,5 @@ function makeCar(make, model) {
     return carObject
 }
 
-console.log(makeCar("Dodge", "Charger"));
+// console.log(makeCar("Dodge", "Charger"));
 
