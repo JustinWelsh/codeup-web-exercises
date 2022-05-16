@@ -74,7 +74,6 @@
         let btn1El = document.getElementById("btn1");
         let btn2El = document.getElementById("btn2");
         let btn3El = document.getElementById("btn3");
-        let btn4El = document.getElementById("btn4");
         let resetBtnEl = document.getElementById("reset-btn")
 
 
@@ -85,22 +84,20 @@
         btn2El.addEventListener("click", function() {
             subHeader.style.color = "blue";
         })
+
         btn3El.addEventListener("click", function() {
-            // for (let i = 0; i < listItems.length; i++) {
-            //     listItems[i].style.color = 'grey';
-            // }
             for (let i = 0; i < listItems.length; i++) {
                 if (i % 2 === 0) {
                     listItems[i].style.color = 'grey';
                 }
-                listItems[0].style.color = 'blue';
+                // listItems[0].style.color = 'blue';
+
+
+                if(listItems[i].getAttribute("data-dbid") === "1") {
+                    listItems[i].style.color = 'blue'
+                }
             }
 
-        })
-        btn4El.addEventListener("click", function() {
-            // for (let i = 0; i < listItems.length; i++) {
-            //     listItems[0].style.color = 'blue';
-            // }
         })
 
         resetBtnEl.addEventListener("click", function() {
