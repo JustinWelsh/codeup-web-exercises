@@ -27,8 +27,10 @@
 <!--    DOM Event Exercise -->
 <button id="btn1">JS is cool!</button>
 <button id="btn2">Hello blue</button>
-<button id="btn3">All Grey</button>
-<button id="btn4">Top blue</button>
+<button id="btn3">Color change</button>
+<!--<button id="btn4">Top blue</button>-->
+<br>
+<button id="reset-btn">RESET</button>
 <!--    -->
 
 <script>
@@ -66,13 +68,15 @@
         for (let i = 0; i < subParagraphs.length; i++) {
             subParagraphs[i].innerText = "Mission Accomplished! 🥳";
         }
-    //======================================================================
+    //============================ DOM EVENTS ============================
     //    TODO - DOM Event Exercise: Add 4 buttons to the page. Attach click event listeners to each of the buttons and have the handlers perform the modifications that were automatically taking place. For example, the first button should set inner html of mainHeader to "JavaScript is Cool".
 
-        let btn1El = document.getElementById("btn1")
-        let btn2El = document.getElementById("btn2")
-        let btn3El = document.getElementById("btn3")
-        let btn4El = document.getElementById("btn4")
+        let btn1El = document.getElementById("btn1");
+        let btn2El = document.getElementById("btn2");
+        let btn3El = document.getElementById("btn3");
+        let btn4El = document.getElementById("btn4");
+        let resetBtnEl = document.getElementById("reset-btn")
+
 
         btn1El.addEventListener("click", function() {
             mainHeader.innerHTML = "JavaScript is Cool"
@@ -82,14 +86,25 @@
             subHeader.style.color = "blue";
         })
         btn3El.addEventListener("click", function() {
+            // for (let i = 0; i < listItems.length; i++) {
+            //     listItems[i].style.color = 'grey';
+            // }
             for (let i = 0; i < listItems.length; i++) {
-                listItems[i].style.color = 'grey';
-            }
-        })
-        btn4El.addEventListener("click", function() {
-            for (let i = 0; i < listItems.length; i++) {
+                if (i % 2 === 0) {
+                    listItems[i].style.color = 'grey';
+                }
                 listItems[0].style.color = 'blue';
             }
+
+        })
+        btn4El.addEventListener("click", function() {
+            // for (let i = 0; i < listItems.length; i++) {
+            //     listItems[0].style.color = 'blue';
+            // }
+        })
+
+        resetBtnEl.addEventListener("click", function() {
+            document.location.reload();
         })
 
     })();
