@@ -237,6 +237,19 @@ function makeObjectFromString(str) {
     return obj;
 };
 
-console.log(makeObjectFromString("John Jacob"));
+// console.log(makeObjectFromString("John Jacob"));
+
+// var isColdOutside = true;
+//
+// var clothingToWear;
+//
+// if (isColdOutside) {
+//     clothingToWear = 'sweater and a jacket';
+//     console.log(clothingToWear);
+// } else {
+//     clothingToWear = 'shorts and a t-shirt';
+//     console.log(clothingToWear);
+// }
+
 
 
