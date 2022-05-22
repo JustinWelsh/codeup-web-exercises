@@ -15,7 +15,7 @@
 <!--Remove the duplicate id. Each id should be unique on that page.-->
 <div id="div-id" class="">
     <h1 id="h1-id" class="codeup">H1 tag</h1>
-    <p class="codeup">P tag</p>
+    <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ea exercitationem fuga labore libero maiores, necessitatibus nisi non numquam porro quod quos repellat reprehenderit soluta suscipit velit veritatis voluptate voluptatem.</p>
     <ul class="ul-class">
         <li id="li-id">Li tag 1</li>
         <li>Li tag 2</li>
@@ -67,10 +67,24 @@
 
     <!--Multiple Selectors-->
         // let highlightAll = $('h1, .codeup, #li-id').css('background', 'grey');
+    //    ====================================================================
+    //    MOUSE EVENTS:
+            let clickForH1Red = $('h1').click(function() {
+                    $(this).css('background', 'red'); //  'this' => the 'h1'
+                });
 
+            let dblClickFontSize18Px = $('p').dblclick(function() {
+                $(this).css('font-size', '18px'); //  'this' => the 'p'
+            })
 
+            let liHoverRedEvent = $('li').hover(
+                function() {
+                $(this).css('color', 'red');
+            },
+            function() {
+                    $(this).css('color', 'black');
+            });
     });
-
 </script>
 </body>
 </html>
