@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--<script src="/js/jquery.js"></script>-->
+<script>
+    "use strict";
+    /**  TODOS:
+     * 1. Allow the user to enter the Konami Code: "↑ ↑ ↓ ↓ ← → ← → b a enter" (the return key).
+     * 2. Find the matching sequence using the code above for each key in the Konami Code.
+     * 3. Don't worry about capital a or b just check for lowercase.
+     *
+     * 4. After the correct Konami Code sequence is inputted, have the script alert the user: "You have added 30 lives!" Other ideas:
+     *
+                 * -Change the background screen.
+                 * -Play a sound.
+                 * -Be creative!
+     * 5. Happy Playing.
+     * **/
+let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+let konamiIndex = 0;
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        let correctKey = konamiCode[konamiIndex]
+        let userEntry = event.keyCode;
+        if (userEntry === correctKey) {
+            console.log("correct entry");
+            konamiIndex++;
+            if (konamiIndex === konamiCode.length) {
+                alert("You have added 30 lives!");
+                konamiIndex = 0;
+            } else {
+            }
+        }
+
+        function cheatActivated() {
+
+        }
+    });
+</script>
+</body>
+</html>
