@@ -7,61 +7,98 @@
 <body>
 <!--EXERCISE below-->
     <!--
-    1. Create a new file named jquery_faq.html. Commit all changes to GitHub.
+    1. Create a new file named jquery_faq.html. Commit all changes to GitHub.✅
 
-    2. In a HTML structure, create a definition list containing 10 FAQs about national parks.
+    2. In a HTML structure, create a definition list containing 10 FAQs about national parks.✅
 
-    3. Add a class to all dd elements named invisible.
+    3. Add a class to all dd elements named invisible.✅
 
-    4. Create some CSS rules that sets elements with the invisible class to visibility: hidden;.
+    4. Create some CSS rules that sets elements with the invisible class to visibility: hidden;.✅
 
-    5. Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
+    5. Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.✅
 
     Bonus:
     1. When any of the dt elements is clicked, the element that was clicked should be highlighted.-->
+<a href="#" id="toggle-visibility">Click here to toggle</a>
+
 <dl>
-    <dt>Question 1</dt>
-    <dd>
+    <dt>FAQ 1</dt>
+    <dd class="invisible">
        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-    <dt>Question 2</dt>
-    <dd>
+    <dt>FAQ 2</dt>
+    <dd class="invisible">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-    <dt>Question 3</dt>
-    <dd>
+    <dt>FAQ 3</dt>
+    <dd class="invisible">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-    <dt>Question 4</dt>
-    <dd>
+    <dt>FAQ 4</dt>
+    <dd class="invisible">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-    <dt>Question 5</dt>
-    <dd>
+    <dt>FAQ 5</dt>
+    <dd class="invisible">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-    <dt>Question 6</dt>
-    <dd>
+    <dt>FAQ 6</dt>
+    <dd class="invisible">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-    <dt>Question 7</dt>
-    <dd>
+    <dt>FAQ 7</dt>
+    <dd class="invisible">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-    <dt>Question 8</dt>
-    <dd>
+    <dt>FAQ 8</dt>
+    <dd class="invisible">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-    <dt>Question 9</dt>
-    <dd>
+    <dt>FAQ 9</dt>
+    <dd class="invisible">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-    <dt>Question 10</dt>
-    <dd>
+    <dt>FAQ 10</dt>
+    <dd class="invisible">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, eum fuga incidunt numquam perferendis perspiciatis quam ratione rem sapiente similique sint vel veniam? Autem commodi cum dolor, optio quasi voluptatum!
     </dd>
-
     <!-- Other terms and descriptions -->
 </dl>
+<!--CSS-->
+<style>
+    .invisible {
+        visibility: hidden;
+    }
+    .highlighter {
+        background: yellow;
+    }
+</style>
+
+<!--SCRIPT-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    // $('dd').click(function(e) {
+    //     $('.dd').toggleClass('invisible');
+    // })
+
+    $(document).ready(function() {
+        $('#toggle-visibility').click(function (event) {
+            event.preventDefault();
+            $('dd').toggleClass('invisible');
+        });
+    });
+
+    $('dt').click(function() {
+        $(this).toggleClass("highlighter"); //using toggle.
+        // $(this).css('background', 'yellow'); // My attempt
+        // if ($(this).css("background-color") !== "rgba(0,0,0,0)") {
+        //     $(this).css("background-color", "rgba(0,0,0,0)")
+        // }//Other way w/o toggle method
+
+    })
+
+
+</script>
 </body>
 </html>
