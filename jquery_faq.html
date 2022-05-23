@@ -108,6 +108,16 @@ The rules are the following:
 </ul>
 <button>Fact 4 Yellow background</button>
 
+<div>
+    <img src="img/jquery-imgs/beach-sunset.jpg" alt="Beach">
+</div>
+<div>
+    <img src="img/jquery-imgs/fireworks.jpg" alt="">
+</div>
+<div>
+    <img src="img/jquery-imgs/mountains.jpg" alt="">
+</div>
+
 <!--CSS-->
 <style>
     .invisible {
@@ -115,6 +125,11 @@ The rules are the following:
     }
     .highlighter {
         background: yellow;
+    }
+
+    img {
+        max-width: 200px;
+        max-height: 200px;
     }
 </style>
 
@@ -154,6 +169,8 @@ The rules are the following:
     $('li').click(function() {
         $(this).parent().children().first().css('color', 'blue')
     });
+
+//        bonus logic
 
 
 
