@@ -103,6 +103,22 @@
     })//    Need event listener on btn
     //
 
+//    TODO: DOM Practice Question #3
+    // Part 1:
+    // Every 1 seconds take the H1 tags and change the font size to 10px.
+    // If its already 10px set it to 20px;
+    let h1TagEl = document.getElementsByTagName('h1');
+    let changingH1TagSize = setInterval(function () {
+      if (h1TagEl.style.fontSize < "10px") {
+          h1TagEl.style.fontSize = "10px";
+      } else if (h1TagEl.style.fontSize === "10px") {
+          h1TagEl.style.fontSize = "20px";
+      }
+    }, interval);
+
+    // Part 2:
+    // Add a toggle button with id of "toggleH1"
+    // use that button to stop and restart the h1 tags from changing size.
 </script>
 </body>
 </html>

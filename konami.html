@@ -22,26 +22,42 @@
      * 5. Happy Playing.
      * **/
 let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+let keypressedArr = [];
 let konamiIndex = 0;
 
     $(document).keyup(function(event){
-        console.log(event.keyCode);
-        let correctKey = konamiCode[konamiIndex]
-        let userEntry = event.keyCode;
-        if (userEntry === correctKey) {
-            console.log("correct entry");
-            konamiIndex++;
-            if (konamiIndex === konamiCode.length) {
-                alert("You have added 30 lives!");
-                konamiIndex = 0;
-            } else {
-            }
-        }
+        //FIRST ATTEMPT:
+        // console.log(event.keyCode);
+        // let correctKey = konamiCode[konamiIndex]
+        // let userEntry = event.keyCode;
+        // if (userEntry === correctKey) {
+        //     console.log("correct entry");
+        //     konamiIndex++;
+        //     if (konamiIndex === konamiCode.length) {
+        //         alert("You have added 30 lives!");
+        //         konamiIndex = 0;
+        //     } else {
+        //     }
+        // }
+        //
+        // function cheatActivated() {
+        //
+        // }
+        keypressedArr.push(event.keyCode);
+        console.log(keypressedArr);
+        konamiCodeActivated()
+        // if (keypressedArr.length > konamiCode.length) {
+        //     keypressedArr = [];
+        //     alert("Sorry, try again")
+        //     console.log(keypressedArr);
+        // }
 
-        function cheatActivated() {
-
-        }
     });
+    function konamiCodeActivated() {
+        if (keypressedArr === konamiCode) {
+            alert("You have added 30 lives!");
+        }
+    }
 </script>
 </body>
 </html>
