@@ -19,6 +19,8 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button id="btn-refresh">Refresh</button>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -26,10 +28,29 @@
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
 
+    $.get('data/inventory.json').done(function(data) {
+        // $("#insertProducts").html("");
+        // console.log(data);
+        data.forEach(function(data){
+            let titleTh = "<td>" + data.title + "</td>";
+            let qntyTh = "<td>" + data.quantity + "</td>";
+            let priceTh = "<td>" + data.price + "</td>";
+            let categoryTh = "<td>" + data.categories + "</td>"
+            $("#insertProducts").append($('<tr>'+titleTh+qntyTh+priceTh+categoryTh+'</tr>'));
+        });
+    });
+
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    let refreshBtnEl = document.getElementById('btn-refresh');
+    refreshBtnEl.addEventListener('click', function(e) {
+        e.preventDefault()
+        location.reload();
+    })
+
 })();
 </script>
 
