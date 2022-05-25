@@ -65,7 +65,8 @@
 </div>
 <script>
 
-    // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
+    // TODO: DOM Practice Question 0
+    //  Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
 
     // let colorPrompt = prompt("Enter a color")
     // let question0El = document.getElementsByClassName("question");
@@ -73,7 +74,8 @@
     //     question0El[0].style.color = colorPrompt;
     // }
 
-//    TODO:  DOM Practice Question #1       Create an HTML file called dom-practice.html in codeup-web-exercises repos. Put a text input on an html page with id of "color" Put a button on the page with id of "changeColor" The above is already done from your previous warm-up :)       Use an Event listener to trigger when the button is clicked. Use the value to change the background-color of the page to match the user's input value. example of input: "#00000", "black", "#FF00FF"
+   // TODO:  DOM Practice Question #1
+    //  Create an HTML file called dom-practice.html in codeup-web-exercises repos. Put a text input on an html page with id of "color" Put a button on the page with id of "changeColor" The above is already done from your previous warm-up :)       Use an Event listener to trigger when the button is clicked. Use the value to change the background-color of the page to match the user's input value. example of input: "#00000", "black", "#FF00FF"
 
     let q1BtnEl = document.getElementById("changeColor");
     let colorInputEl = document.getElementById("color")
@@ -107,6 +109,7 @@
     // Part 1:
     // Every 1 seconds take the H1 tags and change the font size to 10px.
     // If its already 10px set it to 20px;
+
     let h1TagEl = document.getElementsByTagName('h1');
     let changingH1TagSize = setInterval(function () {
       if (h1TagEl.style.fontSize < "10px") {
@@ -114,11 +117,20 @@
       } else if (h1TagEl.style.fontSize === "10px") {
           h1TagEl.style.fontSize = "20px";
       }
-    }, interval);
+    }, 1000);
 
     // Part 2:
     // Add a toggle button with id of "toggleH1"
     // use that button to stop and restart the h1 tags from changing size.
+
+
+//    TODO:     DOM Question #4
+    // When the mouse enters the content area of the 4th div with the class of "question", an alert should pop up
+    // that reads "CONGRATULATIONS ON YOUR NEW CRUISE!";
+
+    document.getElementsByClassName('question')[4].addEventListener('mouseenter', function() {
+        alert("CONGRATULATIONS ON YOUR NEW CRUISE!");
+    });
 </script>
 </body>
 </html>
