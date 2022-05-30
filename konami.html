@@ -5,6 +5,10 @@
 </head>
 <body>
 <h1>Konami Code</h1>
+
+
+
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <!--<script src="/js/jquery.js"></script>-->
 <script>
@@ -21,12 +25,14 @@
                  * -Be creative!
      * 5. Happy Playing.
      * **/
-let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
-let keypressedArr = [];
-let konamiIndex = 0;
 
-    $(document).keyup(function(event){
-        //FIRST ATTEMPT:
+
+    //FIRST ATTEMPT:
+    // //let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    // let keypressedArr = [];
+    // let konamiIndex = 0;
+    //
+    // $(document).keyup(function(event){
         // console.log(event.keyCode);
         // let correctKey = konamiCode[konamiIndex]
         // let userEntry = event.keyCode;
@@ -43,21 +49,67 @@ let konamiIndex = 0;
         // function cheatActivated() {
         //
         // }
-        keypressedArr.push(event.keyCode);
-        console.log(keypressedArr);
-        konamiCodeActivated()
+        // keypressedArr.push(event.keyCode);
+        // console.log(keypressedArr);
+        // konamiCodeActivated()
         // if (keypressedArr.length > konamiCode.length) {
         //     keypressedArr = [];
         //     alert("Sorry, try again")
         //     console.log(keypressedArr);
         // }
+    // // });
+    // function konamiCodeActivated() {
+    //     if (keypressedArr === konamiCode) {
+    //         alert("You have added 30 lives!");
+    //     }
+    // }
 
-    });
-    function konamiCodeActivated() {
-        if (keypressedArr === konamiCode) {
-            alert("You have added 30 lives!");
-        }
-    }
+
+const konamiCode = [38,38,40,40,37,39,37,39,66,65,13];
+const ilyCode = [73, 76, 79, 86, 69, 89, 79, 85, 13]
+let bucketCode = [];
+
+ $(document).keydown(function(e) {
+     // console.log(e.keyCode);
+     bucketCode.push(e.keyCode);
+
+     if (bucketCode.length === konamiCode.length) {  //the length is the first check made,then will trigger further logic.
+         // alert("length matches");
+         if (bucketCode.toString() === konamiCode.toString()) { //".toString" is used to compare the two arrays.
+             alert("KONAMI CODE!!");
+             bucketCode = [];
+         } else {
+             alert("Sorry try again..");
+             bucketCode = [];
+         }
+     }
+     if (bucketCode.length === ilyCode.length) {
+         // alert("length matches");
+         if (bucketCode.toString() === ilyCode.toString()) {
+             alert("I Love You Too!");
+             bucketCode = [];
+         }
+     }
+
+
+
+     console.log(bucketCode);
+ });
+
+ // Test code.       // let arr1st = ['1','2','3'];
+                     // let arr2nd = ['1','2','3'];
+                     //
+                     //    console.log(arr1st.toString());
+                     //
+                     //    function arrEqualTo(arr1,arr2) {
+                     //     if (arr1.toString() === arr2.toString()) {
+                     //         return "match";
+                     //     } else {
+                     //         return "sorry";
+                     //     }
+                     // }
+                     //    console.log(arrEqualTo(arr1st,arr2nd));
+
 </script>
 </body>
 </html>
