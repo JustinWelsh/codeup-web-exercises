@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+header {
+    background: dodgerblue;
+    color: white;
+    padding: 5px 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-shadow: 2px 2px black;
+
+}
+
+/*#map { position: absolute; top: 0; bottom: 0; width: 50%; }*/
+
+#map {
+    width: 65vh;
+    height: 65vh;
+    margin: auto;
+    border-radius: 10px;
+}

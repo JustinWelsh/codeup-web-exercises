@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My Weather Map</title>
+    <link rel="stylesheet" href="css/weather_map.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
 </head>
 <body>
+<header>
+    <h1>Weather App</h1>
+    <p>Current city:</p>
+</header>
+
+<ul id="weather"></ul>
+<div id="weather-cards"></div>
+
+<div id="map"></div>
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -12,17 +24,60 @@
 
 
 <script>
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.4252], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+
     $.get("http://api.openweathermap.org/data/2.5/onecall", {
         APPID: OPEN_WEATHER_KEY,
         lat:    29.423017,
         lon:   -98.48527,
         units: "imperial"
     }).done(function(data) {
-        console.log(data);
         console.log('The entire response:', data);
-        console.log('Diving in - here is current information: ', data.current);
-        console.log('A step further - information for tomorrow: ', data.daily[1]);
+        //CURRENT DAY (needs fixing)
+        // let date = "Display date";
+        // let icon = `<img src="http://openweathermap.org/img/w/[icon].png" alt="">`;
+        // let highLowLi = `<li> ${data.daily[0].temp.max}˚F / ${data.daily[0].temp.min}˚F </li>`;
+        // let humidityLi = `<li>Humidity: ${data.daily[0].humidity}%</li>`;
+        // let windLi = `<li>Wind: ${data.daily[0].wind_speed} mph</li>`;
+        // let pressureLi = `<li>Rain: ${data.daily[0].rain * 100}%</li>`;
+        // $('#weather').html(date + icon + highLowLi + humidityLi + windLi + pressureLi);
+
+        let html = ""  //acting bucket
+        for (let i =0; i <=4; i++) {
+            //FIRST ATTEMPT
+            // let date = "Display date";
+            // // let icon = `<img src="http://openweathermap.org/img/w/[icon].png" alt="">`;
+            // let highLowLi = `<li> ${data.daily[i].temp.max}˚F / ${data.daily[i].temp.min}˚F </li>`;
+            // let humidityLi = `<li>Humidity: ${data.daily[i].humidity}%</li>`;
+            // let windLi = `<li>Wind: ${data.daily[i].wind_speed} mph</li>`;
+            // let pressureLi = `<li>Rain: ${data.daily[i].rain * 100}%</li>`
+            // let date = "Display date";
+            // let icon = `<img src="http://openweathermap.org/img/w/[icon].png" alt="">`;
+            html += `
+                <div class='card'>
+                <ul>
+                    <li><img src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}@2x.png"></li>
+                    <li> ${data.daily[i].temp.max}˚F / ${data.daily[i].temp.min}˚F </li>
+                    <li>Humidity: ${data.daily[i].humidity}%</li>
+                    <li>Wind: ${data.daily[i].wind_speed} mph</li>
+                    <li>Rain: ${data.daily[i].rain * 100}%</li>
+                </ul>
+                </div>`
+
+
+            // html += "" +
+            //     "<ul>"
+
+            $('#weather-cards').html(html);
+        }
     });
+
 </script>
 </body>
 </html>
