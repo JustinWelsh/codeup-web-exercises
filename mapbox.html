@@ -16,6 +16,9 @@
 <script src="js/keys.js"></script>
 <script src="js/geocode-utils.js"></script>
 <script>
+
+
+<!--    THIS IS THE MAP CODE-->
     mapboxgl.accessToken = MAPBOX_API_KEY;
     const MAP = new mapboxgl.Map({
         container: 'map', // container ID
@@ -48,6 +51,8 @@
         console.log(location);
     });
 
+
+    // MARKER DRAG & ADDRESS DISPLAY FEATURE
     let LONG_LAT = [];
     MARKER.on("dragend", function () {
         LONG_LAT = MARKER.getLngLat();
