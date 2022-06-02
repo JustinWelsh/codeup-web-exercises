@@ -15,6 +15,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     units: "imperial"
 }).done(function(data) {
     console.log('The entire response:', data);
+
     //CURRENT DAY (needs fixing)
     // let date = "Display date";
     // let icon = `<img src="http://openweathermap.org/img/w/[icon].png" alt="">`;
@@ -23,6 +24,17 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
     // let windLi = `<li>Wind: ${data.daily[0].wind_speed} mph</li>`;
     // let pressureLi = `<li>Rain: ${data.daily[0].rain * 100}%</li>`;
     // $('#weather').html(date + icon + highLowLi + humidityLi + windLi + pressureLi);
+
+    let currentDayCard = `<div class='card'>
+        <ul>
+           <li>${data.current.temp.toFixed()}˚</li>
+           <li>${data.current.weather[0].main}</li>
+           <li>H ${data.daily[0].temp.max.toFixed()}˚ L ${data.daily[0].temp.min.toFixed()}˚</li>
+        </ul>
+    </div>`;
+
+    $('#weather-current').html(currentDayCard)
+
 
     let html = ""  //acting bucket
     for (let i =0; i <=4; i++) {
@@ -39,7 +51,7 @@ $.get("http://api.openweathermap.org/data/2.5/onecall", {
                 <div class='card'>
                 <ul>
                     <li><img src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}@2x.png"></li>
-                    <li> ${data.daily[i].temp.max}˚F / ${data.daily[i].temp.min}˚F </li>
+                    <li> ${data.daily[i].temp.max.toFixed()}˚F / ${data.daily[i].temp.min.toFixed()}˚F </li>
                     <li>Humidity: ${data.daily[i].humidity}%</li>
                     <li>Wind: ${data.daily[i].wind_speed} mph</li>
                     <li>Rain: ${data.daily[i].rain * 100}%</li>

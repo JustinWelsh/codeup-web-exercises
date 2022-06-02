@@ -9,6 +9,10 @@
     <title>My Weather Map</title>
     <link rel="stylesheet" href="css/weather_map.css">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;900&display=swap" rel="stylesheet">
+
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
 </head>
 <body>
@@ -16,9 +20,12 @@
     <h1>Weather App</h1>
     <p>Current city:</p>
 </header>
+<div class="container">
+    <div id="weather-current"></div>
 
-<ul id="weather"></ul>
-<div id="weather-cards"></div>
+    <div id="weather-cards"></div>
+</div>
+
 
 <div id="map"></div>
 

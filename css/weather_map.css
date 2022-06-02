@@ -1,20 +1,70 @@
-body {
+body, html {
+    height: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
 }
+
 header {
-    background: dodgerblue;
+    background: rgb(37,37,37);
     color: white;
-    padding: 5px 15px;
+    padding: 10px 20px;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     text-shadow: 2px 2px black;
+    box-shadow: 1px 5px 10px red; /*testing*/
 
 }
+
+.container {
+    background: url("../img/weather_map_imgs/sky_1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul {
+    padding: 1em;
+}
+li {
+    list-style: none;
+}
+
+.bg-image {
+    /* The image used */
+    background-image: url("photographer.jpg");
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
 /* Small devices (phones and pocket devices, 576 and up) */
 @media screen and (max-width:576px) {
     body {
-        background: red;
+        background: white;
+    }
+    #weather-current {
+        border: 1px solid green;
+        text-align: center;
+        /*width: 50%;*/
+    }
+    #weather-current li:first-child {
+        font-size: 6em;
     }
     #map {
         display: none;
@@ -24,7 +74,7 @@ header {
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width:768px) {
     body {
-        background: white;
+        background: red;
     }
 }
 
