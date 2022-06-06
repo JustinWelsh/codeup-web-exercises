@@ -17,12 +17,12 @@ header {
     align-items: baseline;
     justify-content: space-between;
     text-shadow: 2px 2px black;
-    box-shadow: 1px 5px 10px red; /*testing*/
+    box-shadow: 1px 5px 10px red; /*appears to display under the background image*/
 
 }
 
 .container {
-    background: url("../img/weather_map_imgs/sky_1.jpg");
+    background-image: url("../img/weather_map_imgs/sky_1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,8 +63,8 @@ li {
         text-align: center;
         /*width: 50%;*/
     }
-    #weather-current li:first-child {
-        font-size: 6em;
+    #weather-current li:nth-child(2) {
+        font-size: 8em;
     }
     #map {
         display: none;
