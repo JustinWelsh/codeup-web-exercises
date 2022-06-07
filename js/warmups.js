@@ -251,5 +251,9 @@ function makeObjectFromString(str) {
 //     console.log(clothingToWear);
 // }
 
+const URL = 'https://quotes.rest/qod';
+fetch(URL)
+    .then(response => response.json().then(response => console.log(response)))
+    .catch(error => console.error(error));
 
 
